@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> 
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <script src="https://kit.fontawesome.com/7167c40843.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navnar-expand navbar-light bg-light justify-content-between sticky-top">
+            <div>
+                <i class="fab fa-instagram"></i>
+                Instagram
+            </div>
+            <div class="navbar navbar-expand">
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#post-modal">Create new post</button>
+                <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-cog"></i>
+                </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action 1</a>
+                        <a class="dropdown-item" href="#">Action 2</a>
+                        <div class="dropdown-divider"></div> 
+                        <a class="dropdown-item" href="#">Log out</a>
+                    </div>                       
+            </div>
+        </nav>
+
+        <div class="modal fade" id="post-modal" tabindex="-1" role="dialog"  aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <!-- <div class="modal-header"> -->
+                        <!-- </div> -->
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                            </form> 
+                            <button type="button" class="btn btn-light"><i class="fas fa-camera"></i></button> 
+                            <button type="button" class="btn btn-light"><i class="fas fa-map-marker-alt"></i></button>  
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
+                            <button type="button" class="btn btn-success">post</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <nav class="nav nav-pills justify-content-center" role="tablist">
+            <a class="nav-item nav-link active" data-toggle="pill" href="#grid" role="tab" aria-selected="true"><i class="fas fa-th"></i></a>
+            <a class="nav-item nav-link" data-toggle="pill" href="#column" role="tab" aria-selected="false"><i class="fas fa-stop"></i></a>        
+        </nav>
+        <div class="tab-content column-view-background">
+            <div class="tab-pane fade show active" id="grid" role="tabpanel" aria-labelledby="pills-grid-tab">
+                <div class="row grid-row">
+                    <div class="col-md-4 bg-picture picture1">                     
+                    </div>
+                    <div class="col-md-4 bg-picture picture2">
+                    </div>
+                    <div class="col-md-4 bg-picture picture3">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="column" role="tabpanel" aria-labelledby="pills-column-tab">
+                <div class="row row-buffer justify-content-center">
+                    <div class="col-4">
+                        <div class="card border-transparent">
+                            <div class="card-header row border-transparent bg-transparent justify-content-between">
+                                <div class="col-2 text-nowrap">
+                                    Post Title
+                                </div>
+                                <div class="col-2">
+                                    12/14
+                                </div>
+                            </div>
+                            <div class="card-body bg-picture card-picture picture1">
+                            </div>
+                            <div class="card-footer bg-transparent border-transparent">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut officia fuga molestiae autem ex corrupti repudiandae ab!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-buffer justify-content-center">
+                    <div class="col-4">
+                        <div class="card border-transparent">
+                            <div class="card-header row border-transparent bg-transparent justify-content-between">
+                                <div class="col-2 text-nowrap">
+                                    Post Title 2
+                                </div>
+                                <div class="col-2">
+                                    1/23
+                                </div>
+                            </div>
+                            <div class="card-body bg-picture card-picture picture2">
+                            </div>
+                            <div class="card-footer bg-transparent border-transparent">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut officia fuga molestiae autem ex corrupti repudiandae ab!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-buffer justify-content-center">
+                    <div class="col-4">
+                        <div class="card border-transparent">
+                            <div class="card-header row border-transparent bg-transparent justify-content-between">
+                                <div class="col-2 text-nowrap">
+                                    longer post title
+                                </div>
+                                <div class="col-2">
+                                    2/15
+                                </div>
+                            </div>
+                            <div class="card-body bg-picture card-picture picture3">
+                            </div>
+                            <div class="card-footer bg-transparent border-transparent">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam pariatur id fugiat quaerat rem vel quae cupiditate, dolore dolores, quo nostrum aliquid. Necessitatibus ut praesentium iusto amet eligendi. Ea quam esse perspiciatis.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
